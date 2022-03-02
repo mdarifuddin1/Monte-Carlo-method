@@ -1,0 +1,38 @@
+Simulation & Modeling (Lab) work
+Assignment 01
+
+Problem Name :Do a Program on Random walk problem (Monte Carlo method) where the user will be able to take the associated probabilities of each direction 
+Also, the user should be able to take the values for incrementation and decrementation values for each direction 
+The starting position should also be taken as input from the user in Java program
+
+Assigning random numbers to the directions should be done during compilation (not manually) 
+ Selection of random numbers for each step should also be done during compilation (mot manually) 
+The number of steps should be taken as input .
+
+Name : Md Arif Uddin
+ID : 193027042
+
+This my code
+
+import random
+import  math
+def random_walk(n):
+    x =0
+    y =0
+    for i in range(n):
+        S = random.choice(['North','South','Eest','West']) # S for step
+        if S =='North':  
+            y = y+1
+        elif S =='South':
+            y = y-1
+        elif S =='Eest':
+            x = x+1
+        else:
+            x = x -1
+    return (x,y)
+A = int(input("Plase push the step: "))
+B = int(input("Enter the value : "))
+for i in range(A):
+    walk = random_walk(B)
+    print(walk,"Distance to every Step = ",abs(walk[0]) + abs(walk[1]))
+
